@@ -6,10 +6,14 @@
   </div>
 </div>
 
+<h1>See lists of movie collectons</h1>
 
-<h1>Lists of movies collections</h1>
+<div class="whole_grid">
   <% @lists.each do |list|%>
-  <p>
-  <%= list.name %>
-  </p>
+    <%= link_to list_path(list) do %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://mariachibandadelaide.com.au/wp-content/uploads/Canberra-Multicultural-Festival.jpg)">
+      <%= list.name %>
+    </div>
+    <% end %>
   <% end %>
+</div>
